@@ -27,16 +27,16 @@ Use code coverage to find untested code and a problem with the tests.
 
 6. Run coverage again with the `--branch` option to see if all branches of "if" statements are covered:
    ```bash
-   coverage run --branch -u unittest triange_test.py
+   coverage run --branch -m unittest triangle_test.py
    coverage html
    ```
 
 7. What lines in the **unit test code** were not executed?     
-   Write the Line Numbers: [                  ]
+   Write the Line Numbers: [27, 31, 35, 39]
 
 8. Normally, **all** the lines of test code should be executed.  When some part of test code is not executed it may indicate a problem with the tests.  Explain the problem in the unit test code. (write your answer below).
 
-   Answer: The function should have start with `def test`. If it not start like that it will not executed because unittest not know that is the test.
+   Answer: When we create test code, we should not write whole test case in one test function because if the unittest check found one of the test is pass, other test case will not run and pass too.
 
 
 

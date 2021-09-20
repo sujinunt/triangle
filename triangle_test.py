@@ -4,6 +4,7 @@ from triangle import is_triangle
 class TriangleTest(unittest.TestCase):
 
     def test_valid_triangle(self):
+        """Test a,b,c is triangle"""
         self.assertTrue( is_triangle(1, 1, 1) )
         self.assertTrue( is_triangle(3, 4, 5) )
         self.assertTrue( is_triangle(3, 4, 6) )
@@ -12,6 +13,7 @@ class TriangleTest(unittest.TestCase):
         self.assertTrue( is_triangle(0.9, 1.0, 1.1) )
 
     def test_not_triangle(self):
+        """Test a,b,c is not triangle"""
         self.assertFalse( is_triangle(21, 10, 10) )
         self.assertFalse( is_triangle(2, 1, 1) )   # borderline case
         self.assertFalse( is_triangle(6, 10, 4) )  # borderline case
